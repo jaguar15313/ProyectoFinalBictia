@@ -12,7 +12,7 @@ function create(req,res){
     var user = new User();//esta es una nueva instacia del modelo user
     var params = req.body;
 
-    user.firtsName =params.firstName;
+    user.firstName =params.firstName;
     user.lastName = params.lastName;
     user.email = params.email;
     user.password=Crypto(params.password);
