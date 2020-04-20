@@ -1,6 +1,8 @@
 const express = require('express');
-const bodyParser=require('body-parser')
-const routes=require('./api/routes/userRoutes')
+const bodyParser=require('body-parser');
+const routes=require('./api/routes/userRoutes');
+const movieRoutes=require('./api/routes/movieRoutes');
+
 const app=express();
 app.use(bodyParser.json());//Analiza los datos que se pasan por la url
 
@@ -16,6 +18,10 @@ app.use((req,res,next)=>{
  next();
 })
 
+//CONFIGURAR CABECERAS HTTP
+
+//RUTAS BASE
 app.use('/api',routes);
+app.use('/api', movieRoutes);
 
 module.exports=app;

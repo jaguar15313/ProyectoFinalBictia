@@ -12,4 +12,4 @@ mongoose.connect('mongodb://localhost:27017/bictiaPelis', {useNewUrlParser: true
         })
     }
 
-});//analizador del strin que tenemos
+});
